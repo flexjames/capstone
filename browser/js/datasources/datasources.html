@@ -1,0 +1,8 @@
+<div class="row">
+	<div class="col col-md-8">
+		<div id="modalDiv">
+			<h3>Blue buttons: uploaded datasources / Green buttons: seeded datasources.</h3>
+			<button type="button" class="btn btn-sm" ng-class="data.seed ? 'btn-success btn-md' : 'btn-info btn-md' " id="modalBtn" ng-repeat="data in userData" ng-click="open(data)">{{data.fileName}}</button>
+		</div>
+	</div>
+</div>

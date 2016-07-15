@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    title= project
+    link(
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+      )
+    link(
+      href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.css",
+      rel="stylesheet"
+    )
+    script(src="https://use.fontawesome.com/66de9eb678.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js")
+    script(src="https://d3js.org/d3.v4.0.0-alpha.35.min.js")
+    script(src="https://d3js.org/d3.v3.min.js")
+    script(src="https://d3js.org/d3-hierarchy.v0.3.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.7/angular-nvd3.min.js")
+    script(src="https://cdn.jsdelivr.net/bluebird/3.4.1/bluebird.min.js")
+    script(src="script.js")
+  body(ng-app="YourAngularApp")
+    div(id="workarea", ng-controller="ProjectRenderCtrl")
+      {{appConfig}}
+    for directive in directives
+      script(type='text/ng-template', id=directive.id)
+        !{ directive.content }

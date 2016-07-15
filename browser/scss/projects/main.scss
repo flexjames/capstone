@@ -1,0 +1,217 @@
+.viewPortSimulator{
+
+}
+#control_panel{
+
+  color: rgba(255,255,255,0.7);
+      z-index: 2000;
+
+}
+.control_panel {
+	font-size: 11px;
+    height: 0px;
+    margin: auto auto;
+    position: fixed;
+    position: none;
+    left: 10%;
+    width: 80%;
+    bottom: 0px;
+    background-color: rgba(47,47,47,1);
+    border-radius: 4px 4px 0px 0px;
+    transition: all .7s;
+}
+.control_panel input[type="text"]{
+    font-size: 11px;
+    font-weight: normal;
+    height: 26px;
+    color: rgba(255,255,255,0.7);
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 0px;
+    border: 1px solid rgba(0,0,0,0.7);
+    margin-top: 4px;
+}
+.control_panel select{
+    font-size: 11px;
+    font-weight: normal;
+    height: 26px;
+    color: rgba(255,255,255,0.7);
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 0px;
+    border: 1px solid rgba(0,0,0,0.7);
+    margin-top: 4px;
+}
+
+.cpl_input_labels{
+	width:100% ;
+    font-size: 11px;
+    font-weight: normal;
+
+}
+.control_panel_show {
+    height: 320px;
+}
+
+.control_panel_minbut{
+	    float: right;
+    margin: 10px;
+
+}
+.control_panel_opener{
+    float: right;
+    top :100px;
+}
+
+#cpl_move {
+	border-radius: 4px;
+	margin: 10px;
+
+}
+#cpl_move table {
+	border-collapse: separate;
+    border-spacing: 4px;
+    background-color: rgba(0,0,0,0.7);
+}
+#cpl_move table td{
+	font-size: 20px;
+	height:30px;
+	width:30px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(0,0,0,0.0);
+	/*color: rgba(255,255,255,0.5);*/
+	transition: all .5s;
+}
+#cpl_move table td.arrow:hover{
+	background-color: rgba(0,0,0,0.5);
+	/*color: rgba(255,255,255,1);*/
+}
+
+.cpl_input_rows > td{
+padding : 4px;
+
+color:#fff
+}
+
+
+.form_container{
+	margin : 30px;
+
+}
+.form_container > div{
+	width:400px;
+	height:150px;
+	margin : 0px;
+	overflow-y : auto;
+	padding: 10px;
+}
+.form_container > div{
+	width:400px;
+	height:150px;
+	margin : 0px;
+	overflow-y : auto;
+	padding: 10px;
+}
+
+.directive_shop_panel {
+    width: 50px;
+    /* height: 83px; */
+    margin: auto auto;
+    position: fixed;
+    top: 150px;
+    left: -2px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    border-radius: 0px 4px 4px 0px;
+    transition: all .4s;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+.directive_shop_panel_show {
+	position: none;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    margin: auto auto;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+
+}
+
+.directive_shop_panel_body{
+	height : 90%;
+	margin: 10px;
+	margin-top: 20px;
+	overflow-x:hidden;
+    overflow-y:auto;
+}
+.directive_shop_body{
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.directive_shop_card{
+	position: none;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    padding:10px;
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.7);
+}
+
+.directive_card_container{
+	height: 250px;
+	padding:10px;
+	margin-top : 20px;
+	border-radius: 4px 4px 4px 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    
+}
+
+.edit_row{
+	padding:0 20 20 20px
+}
+
+.edit_col{
+	padding:20px
+}
+
+.edit_row_passive{
+	border : 2px solid rgba(0,0,0,0);
+	border-radius:5 0 5 5px;
+	min-height : 100px ;
+	min-width: 50px;
+	padding:0px;
+	transition-property: border;
+    transition-duration: .2s;
+ }
+
+.edit_row_active{
+	border : 2px solid green;
+	box-shadow : 0px 0px 250px rgba(0,0,0,0.1)
+}
+
+.directiveSpace{
+	margin:10px
+}
+.edit_spot_active{
+display:block;
+}
+.edit_spot_active{
+display:none;
+
+}
+
+.bottomMargin{
+    margin-bottom:350px;
+}
+
+
+
+
+
+
+

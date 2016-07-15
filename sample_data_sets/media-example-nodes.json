@@ -1,0 +1,140 @@
+[
+  {
+    "id": "s01",
+    "name": "NY Times",
+    "group": 1,
+    "type.label": "Newspaper",
+    "audience.size": 20,
+    "image":"https://s-media-cache-ak0.pinimg.com/736x/c4/81/1d/c4811d59c17568b2ea75b1327d0dfc9e.jpg"
+  },
+  {
+    "id": "s02",
+    "name": "Washington Post",
+    "group": 1,
+    "type.label": "Newspaper",
+    "audience.size": 25,
+    "image":"https://www.washingtonpost.com/favicon.ico"
+  },
+  {
+    "id": "s03",
+    "name": "Wall Street Journal",
+    "group": 1,
+    "type.label": "Newspaper",
+    "audience.size": 30,
+    "image":"http://pbs.twimg.com/profile_images/685113343204585473/jV72Zljq_reasonably_small.jpg"
+
+  },
+  {
+    "id": "s04",
+    "name": "USA Today",
+    "group": 1,
+    "type.label": "Newspaper",
+    "audience.size": 32,
+    "image": "http://about.eventful.com/archives/usa_today_logo.gif"
+  },
+  {
+    "id": "s05",
+    "name": "LA Times",
+    "group": 1,
+    "type.label": "Newspaper",
+    "audience.size": 20,
+    "image":"http://pbs.twimg.com/profile_images/546329819919560704/XMWy2Z50_reasonably_small.jpeg"
+  },
+  {
+    "id": "s06",
+    "name": "New York Post",
+    "group": 1,
+    "type.label": "Newspaper",
+    "audience.size": 50,
+    "image": "https://nyoobserver.files.wordpress.com/2013/06/8940da4061a1eacd2ac105bc21b664b8.jpeg"
+  },
+  {
+    "id": "s07",
+    "name": "CNN",
+    "group": 2,
+    "type.label": "TV",
+    "audience.size": 56,
+    "image":"http://findicons.com/files/icons/2796/metro_uinvert_dock/128/cnn.png"
+  },
+  {
+    "id": "s08",
+    "name": "MSNBC",
+    "group": 2,
+    "type.label": "TV",
+    "audience.size": 34,
+    "image":"http://falconbroadband.net/wp-content/uploads/converted_files/images/stories/38_Basic_MSNBC_logo_color.jpg"
+  },
+  {
+    "id": "s09",
+    "name": "FOX News",
+    "group": 2,
+    "type.label": "TV",
+    "audience.size": 60,
+    "image":"http://global.fncstatic.com/static/v/all/img/fn_128x128.png"
+
+  },
+  {
+    "id": "s10",
+    "name": "ABC",
+    "group": 2,
+    "type.label": "TV",
+    "audience.size": 23,
+    "image":"http://www.bellatrixmedianetworks.com/wp-content/uploads/2012/07/abc.png"
+  },
+  {
+    "id": "s11",
+    "name": "BBC",
+    "group": 2,
+    "type.label": "TV",
+    "audience.size": 34,
+    "image":"https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/BBC_News.svg/1280px-BBC_News.svg.png"
+  },
+  {
+    "id": "s12",
+    "name": "Yahoo News",
+    "group": 3,
+    "type.label": "Online",
+    "audience.size": 33,
+    "image":"https://cdn3.iconfinder.com/data/icons/ultimate-social/150/43_yahoo-64.png"
+  },
+  {
+    "id": "s13",
+    "name": "Google News",
+    "group": 3,
+    "type.label": "Online",
+    "audience.size": 23,
+    "image":"https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-128.png"
+  },
+  {
+    "id": "s14",
+    "name": "Reuters.com",
+    "group": 3,
+    "type.label": "Online",
+    "audience.size": 12,
+    "image":"http://pbs.twimg.com/profile_images/3379693153/1008914c0ae75c9efb5f9c0161fce9a2_reasonably_small.png"
+  },
+  {
+    "id": "s15",
+    "name": "NYTimes.com",
+    "group": 3,
+    "type.label": "Online",
+    "audience.size": 24,
+    "image":"https://s-media-cache-ak0.pinimg.com/736x/c4/81/1d/c4811d59c17568b2ea75b1327d0dfc9e.jpg"
+  },
+  {
+    "id": "s16",
+    "name": "WashingtonPost.com",
+    "group": 3,
+    "type.label": "Online",
+    "audience.size": 28,
+    "image":"https://subscribe.washingtonpost.com/loginregistration/images/wpLogo-48x48.png"
+  },
+  {
+    "id": "s17",
+    "name": "AOL.com",
+    "group": 3,
+    "type.label": "Online",
+    "audience.size": 33,
+    "image":"http://www.targetmarketnews.com/AOL-Logo-Reflex-Blue-.gif"
+  }
+]

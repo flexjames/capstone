@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fdfdfd;
+}
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+#project-list {
+  li {
+    list-style-type:none;
+  }
+  i {
+    margin: 10px;
+  }
+}
+.tile {
+    min-height: 40px;
+    background-color: rgba(91, 192, 222, 0.46);
+    border-radius: 10px;
+    min-width: 50px;
+    a {
+      font-size: 1em;
+    }
+}
+
+.modal-content {
+    border-radius: 10px;
+    padding: 10px;
+}
+.githubbtn {
+  background: black;
+}
+
+#modalDiv {
+  width: 80em;
+  margin-left: 9em;
+  .btn-sm {
+    padding: 4px 12px;
+  }
+}
+
+#dfHeader {
+  width: 30em;
+  margin-left: 5em;
+}
+
+#modalBtn {
+  border-radius: 10px;
+  margin: 3px;
+}
+
+#modalClosebtn {
+  border-radius: 10px;
+}
+
+#githubbtn {
+  background: black;
+}
+
+#main {
+  /*padding-top: 60px;*/
+  margin: 0 auto;
+}
+
+#splashscreen {
+  /*margin-top:-60px;*/
+  img {
+    postion:fixed;
+    left:0px;
+    top:0px;
+  }
+}
+
+.header-label {
+  border-radius: 5px;
+  background-color: orange;
+  margin: 2px;
+  padding: 2px;
+  cursor:default !important;
+}
+
+#homepage-text-wrapper {
+  color:white;
+
+  h1 {
+    font-size: 7em;
+  }
+  text-align: left;
+}
+
+#splash-btn-wrapper {
+  color:white;
+  font-family: 'Poiret One', cursive;
+  position:fixed;
+  left:680px;
+  top:360px;
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  #homepage-text-wrapper{
+      left:100px;
+      top:210px;
+  }
+
+
+   #splash-btn-wrapper {
+        left:280px;
+        top:460px;
+
+        button {
+          height: 150px;
+          width: 150px;
+          font-size: 1em;
+        }
+    }
+  #splash-btn {
+      height: 150px;
+      width: 150px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+  #homepage-text-wrapper{
+
+    h1 {
+          font-size: 2em;
+          /*font-family: 'Inconsolata' ;*/
+          font-family: 'Poiret One', cursive;
+        }
+      h3 {
+        /*font-family: monospace;*/
+        /*font-family: 'Inconsolata' ;*/
+        font-family: 'Poiret One', cursive;
+      }
+      left:100px;
+      top:210px;
+  }
+
+
+   #splash-btn-wrapper {
+        left:120px;
+        top:360px;
+        button {
+          height: 100px;
+          width: 100px;
+          font-size: 1em;
+        }
+    }
+
+}
+
+#splash-btn {
+  border-radius: 10px;
+  i {
+    margin-left:5px;
+  }
+  border-color: white;
+  background-color: transparent;
+  border-radius: 100%;
+  border-color: white;
+  background-color: transparent;
+  height: 200px;
+  width: 200px;
+  border-width: 4px;
+  font-size: x-large;
+}
+
+
+.dcard-img-wrapper {
+  /*height:200px;
+  width:200px;*/
+   img {
+    border: 1px rgba(91, 192, 222, 0.62) solid;
+    border-radius: 5px;
+   }
+};
+.d_store {
+  color:black;
+}
+
+
+.ds-browser-demo {
+  border:2px solid #dddddd;
+  border-radius: 5px;
+}
+
+.data-view {
+  max-height: 200px;
+  overflow: scroll;
+}
+
+@import 'directives/main';
+@import 'home/main';
+@import 'about/main';
+
+@import 'login/main';
+@import 'projects/main';

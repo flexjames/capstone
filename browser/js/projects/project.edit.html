@@ -1,0 +1,149 @@
+<div class="container-fluid" style="padding:0px">
+  <div id="workarea" ng-class="{'bottomMargin': cplopen}"></div>
+  <div style="overflow:hidden" id="directive_shop_panel" class="directive_shop_panel" ng-class="{directive_shop_panel_show: DSopen}">
+    <div class="row" ng-show="DSopen">
+      <div style="margin-top:10px;margin-bottom:10px" class="col-lg-offset-1 col-xs-7">
+        <input type="button" class="btn btn-info" value="ADD A ROW" ng-click="addToPage(builtInManifests[1])">
+      </div>
+      <div class="col-xs-3" style="margin:10px">
+        <labeL style="font-size:14px"> SEARCH
+          <input type="text" ng-model="manifestfilter">
+        </labeL>
+      </div>
+    </div>
+    <div class="row" style="height:90%">
+      <div style="width: 100%;overflow: hidden;height:100%">
+        <div class="col-xs-1" ng-click="DSopen = false" ng-show="DSopen" style="    font-size: 50px;color: rgba(0,0,0,0.5);height: 100%;padding-top: 17%;"><span class="glyphicon glyphicon-chevron-left"></span></div>
+        <div class="col-xs-10" ng-show="DSopen" style="height:100%;overflow-y:scroll">
+          <div class="row">
+            <directive_shop_card if-show="currentManifest.ai_directive == true" ng-repeat="currentManifest in allManifests | filter : manifestfilter" manifest="currentManifest" ng-click="addToPage(currentManifest)"></directive_shop_card>
+          </div>
+          <div style="height:40px">&nbsp;</div>
+        </div>
+        <div class="col-xs-1" ng-click="DSopen = true;cplopen = false;" ng-hide="DSopen" style="font-size: 50px;color: rgba(0,0,0,0.5);height: 100%;"><span class="glyphicon glyphicon-chevron-right"></span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- control panel -->
+  <div id="control_panel" class="control_panel" ng-class="{control_panel_show: cplopen}" ng-mouseenter="cplopen1 = true;DSopen = false">
+    <div id="control_panel_minbut" ng-show="cplopen" class="control_panel_minbut" ng-click="cplopen = false"><span class="glyphicon glyphicon-minus"></span>
+    </div>
+    <div class="container-fluid">
+      <!-- contol area -->
+      <!-- contol area -->
+      <div class="col-xs-12 col-sm-12col-md-12 col-lg-12 col-md-12 col-xl-12">
+        <div class="row">
+          <div class="col-sx-12">
+            <h3 style="margin-top:0px;margin-left:20px">{{appConfigEditCopy.ai_content.ai_directive_name}}<h3></div>
+                            </div>
+                            <div class="row" >
+                                     <!-- directive properties area -->
+                                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7" style="overflow-y: auto;height: 223px;"">
+                                          <!-- singles directive  -->
+                                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"  ng-repeat="(key, value) in appConfigEditCopy.ai_content.ai_directive_attributes" class="cpl_input_rows" ng-hide="key == 'ai_info_source'">
+                                              <label class="cpl_input_labels">{{key}}<input class="form-control" type="text" id={{key}} ng-model=appConfigEditCopy.ai_content.ai_directive_attributes[key] name={{key}} value="value" ></label>
+                                          </div>
+
+                                         <!--  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" ><label class="cpl_input_labels">info source</label><select ng-options="sources.id as sources.description for sources in project_info_sources" class="form-control" type="text" id={{key}} ng-model="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_source" name={{key}}></select>
+                                          </div> -->
+
+                                          <div ng-hide="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_node_source" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" ><label class="cpl_input_labels">info source</label><select ng-options="source._id as source.fileName for source in uploadedFiles" class="form-control" type="text" id={{key}} ng-model="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_source" name={{key}}></select>
+                                          
+                                          </div>
+                                          <!-- edges and nodes -->
+
+                                          <div ng-show="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_node_source" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" ><label class="cpl_input_labels">info node source</label><select ng-options="source._id as source.fileName for source in uploadedFiles" class="form-control" type="text" id={{key}} ng-model="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_node_source" name={{key}}></select>
+                                          </div>
+                                          <div ng-show="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_node_source" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" ><label class="cpl_input_labels">info edge source</label><select ng-options="source._id as source.fileName for source in uploadedFiles" class="form-control" type="text" id={{key}} ng-model="appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_edge_source" name={{key}}></select>
+                                          </div>
+                                            <!-- return file headers -->
+                                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" ><label class="cpl_input_labels">File Headers:</label> <button class="btn btn-xs header-label" ng-repeat="header in getHeaders(appConfigEditCopy.ai_content.ai_directive_attributes.ai_info_source,fileHeaders)">{{header}}</button>
+                                          </div>
+
+                                          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" ><label class="cpl_input_labels">                                           <!-- <file-uploader projId='{{projId}}' userId='{{userId}}'></file-uploader> -->
+                                          <!--File Uploader-->
+                                          <div>
+                                          <label class="cpl_input_labels">Upload a CSV
+                                          <button class="btn btn-info" style="font-size:9px;height: 25px; width: 100%;margin-top: 10px"
+                                          type="file"
+                                          ngf-select="uploadFiles($file, $invalidFiles)"
+                                          ngf-max-height="1000"
+                                          ngf-max-size="5MB">Select File</button>
+                                           File:
+                                            <div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+                                                <span class="progress" ng-show="f.progress >= 0" style="width: 100px">
+                                                    <div style="width:{{f.progress}}%; display: inline; background: orange"
+                                                         ng-bind="f.progress + '%'"></div>
+                                                </span>
+                                            </div>
+                                            {{errorMsg}}
+                                          </label>
+
+                                          </div>
+
+                                          </div>
+                                    </div>
+
+
+                                        <!-- move box -->
+                                    <div class="col-xs-3  ">
+            <div class="row">
+                                          <!-- move box -->
+                                              <div id="cpl_move">
+                                                   <table>
+                                                   <tr><td></td><td class="arrow"><span class="glyphicon glyphicon-triangle-top" ng-click="moveElementVert('up')"></span></td><td></td></tr>
+                                                   <tr><td class="arrow"><span class="glyphicon glyphicon-triangle-left" ng-click="moveElementHorz('left')"></td><td></td><td class="arrow"> <span class="glyphicon glyphicon-triangle-right" ng-click="moveElementHorz('right')"></span></td></tr>
+                                                   <tr><td></td><td class="arrow"><span class="glyphicon glyphicon-triangle-bottom"  ng-click="moveElementVert('down')"></span></td><td></td></tr>
+                                                   </table>
+                                              </div>
+
+                                              <!-- boot size selectors -->
+                                              <div ng-repeat="(key, value) in appConfigEditCopy.ai_directive_attributes.ai_bootstrap_width">
+                                                   <label class="visible-{{key}}">Columns used viewed on {{appConfigEditCopy.ai_directive_attributes.ai_bootstrap_width[key].devicename}}
+                                                     <select ng-options=" availSizes.width as availSizes.width for availSizes in availableColumnWidths" class="form-control" type="text" id={{}} ng-model="appConfigEditCopy.ai_directive_attributes.ai_bootstrap_width[key].size" name={{key}}>
+                                                     </select>
+                                                   </label>
+                                              </div>
+                                              <!-- boot view selectors -->
+                                              <div ng-repeat="(key, value) in appConfigEditCopy.ai_directive_attributes.ai_bootstrap_show">
+                                                   <label class="visible-{{key}}">Visible when viewed on {{appConfigEditCopy.ai_directive_attributes.ai_bootstrap_show[key].devicename}}
+                                                     <select ng-options=" availshow.show as availshow.show for availshow in availableColumnShow" class="form-control" type="text" id={{}} ng-model="appConfigEditCopy.ai_directive_attributes.ai_bootstrap_show[key].show" name={{key}}>
+                                                     </select>
+                                                   </label>
+                                              </div>
+                                          </div>
+                                  </div>
+                                    <!-- save and canel -->
+                                    <div class="col-sm-2">
+                                        <div class="row">
+
+                                            <!--File Uploader-->
+                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                  <input type="button" class="btn btn-default" value="undo" ng-click="undoEdit()"style="font-size:8px;margin-top: 10px;width:100%">
+                                              </div >
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                                  <input type="button" class="btn btn-default" value="redo" ng-click="redoEdit()" style="font-size:8px;margin-top: 10px;10px;width:100%" >
+                                              </div >
+
+                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                  <input type="button" class="btn btn-default" value="CANCEL" ng-click="cancelEdit()" style="font-size:8px;height: 30px;margin-top: 10px;padding: 0px 0px;width:100%">
+                                              </div >
+
+                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                  <input type="button" class="btn btn-danger" value="REMOVE" ng-click="deleteElement()"style="font-size:8px;height: 30px; margin-top: 10px;padding: 0px 0px;width:100%">
+                                              </div>
+                                               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                                                  <input type="button" class="btn btn-success" value="SAVE" ng-click="saveEdit()" style="font-size:8px;height: 30px; margin-top: 10px;width:100%">
+                                              </div>
+                                               <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                                                  <input type="button" class="btn btn-warning" value="EXPORT" ng-click="export()" style="font-size:8px;height: 30px; margin-top: 10px;width:100%">
+                                              </div> -->
+                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                                                <ai-download></ai-download>
+                                              </div>
+                                        </div>
+                                    </div>
+                            </div>
+                    <!-- controll panel end-->

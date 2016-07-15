@@ -1,0 +1,33 @@
+{
+ "name": "Capstone",
+ "children": [
+  {
+   "name": "directive store",
+   "children": [
+    {
+     "name": "d3-pie-graph",
+     "children": [
+      {"name": "html", "size": 3938},
+      {"name": "manifest", "size": 3812},
+      {"name": "js", "size": 6714}
+     ]
+    },
+    {
+     "name": "scatter chart",
+     "children": [
+      {"name": "html", "size": 3938},
+      {"name": "manifest", "size": 3812},
+      {"name": "js", "size": 6714}
+     ]
+    },
+    {
+     "name": "section text",
+     "children": [
+      {"name": "text", "size": 7074},
+      {"name": "section title", "size": 7074}
+     ]
+    }
+   ]
+  }
+]
+}

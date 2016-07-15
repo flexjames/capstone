@@ -1,0 +1,39 @@
+{
+"name": "Whitehouse",
+"children": [
+ {
+  "name": "Obamas",
+  "children": [
+   {
+    "name": "Michelle",
+    "children": [
+     {"name": "Malia", "size": 3938},
+     {"name": "Sasha", "size": 3812}
+    ]
+   }
+ ]
+},
+ {
+  "name": "Bidens",
+  "children": [
+   {
+    "name": "Jill",
+    "children": [
+     {"name": "Beau", "size": 721},
+     {"name": "Hunter", "size": 4294},
+     {"name": "Ashley", "size": 9800},
+     {"name": "Valerie", "size": 1314}
+    ]
+   },
+   {
+     "name":"Secret Wife",
+     "children": [
+       {"name": "Steve"},
+       {"name": "Amy"},
+       {"name": "Ellen"}
+     ]
+   }
+  ]
+ }
+  ]
+ }

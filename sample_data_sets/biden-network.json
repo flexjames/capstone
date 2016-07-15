@@ -1,0 +1,9 @@
+{"nodes":[
+    {"name": "Obama"},
+    {"name": "Joey Biden","target":[0,1,3,4]},
+    {"name": "Hillary"},
+    {"name": "Michelle Obama", "target":[1,2]},
+    {"name": "Malia", "target":[1,2]},
+    {"name": "Natasha", "target":[2,1]},
+    {"name": "Corey Booker"}
+  ]}

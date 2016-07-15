@@ -1,0 +1,9 @@
+{"nodes":[
+    {"name": "Grandpa Jones"},
+    {"name": "Papa Jim","target":[0]},
+    {"name": "Jane"},
+    {"name": "Jim Jr", "target":[1,2]},
+    {"name": "Big Steve", "target":[1,2]},
+    {"name": "Lil J", "target":[2,1]},
+    {"name": "That other kid"}
+  ]}

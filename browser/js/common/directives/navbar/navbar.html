@@ -1,0 +1,28 @@
+<nav class="navbar navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <fullstack-logo></fullstack-logo>
+        </div>
+        <!-- <ul class="nav navbar-nav">
+            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
+                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+            </li>
+        </ul> -->
+        <a ng-show="!user" ui-sref-active="active" ui-sref="home"><i class="fa fa-home fa-2x" aria-hidden="true" style="margin: 10px"></i>Home</a>
+
+        <a ng-show="user" ui-sref-active="active" ui-sref="home"><i class="fa fa-files-o fa-2x" aria-hidden="true" style="margin: 10px"></i>Projects</a>
+
+        <a ui-sref-active="active" ui-sref="viewer"><i class="fa fa-cubes fa-2x" aria-hidden="true" style="margin: 10px"></i>Directives</a>
+
+        <a ng-show="user" ui-sref-active="active" ui-sref="datasources"><i class="fa fa-database fa-2x" aria-hidden="true" style="margin: 10px"></i>Datasources</a>
+
+        {{projBadge}}
+
+        <button ng-show="!user" ui-sref="signup" class="btn btn-info login-button">Sign Up <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+        <button ng-show="!user" ui-sref="login" class="btn btn-success login-button">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        <div ng-show="user" class="welcome">
+            <span>Welcome, {{ user.email || user.github.username}}!</span>
+            <a ng-click="logout()">Logout</a>
+        </div>
+    </div>
+</nav>
